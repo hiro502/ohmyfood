@@ -8,23 +8,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
 </head>
 
 <body>
-    <header>
-
+    <header class="header_container">
+        <div class="hdr_img">
+            <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood">
+        </div>
+        <form class="hdr_location" method="get" action="#">
+            <button type="submit">
+                <i class="fa-solid fa-location-dot" style="color: #353535;"></i>
+            </button>
+            <input type="search" name="search" value="" placeholder="Paris,Belleville">
+        </form>
     </header>
     <main>
-    
+        <div class="introduction">
+            <h2>Réservez le menu qui
+                vous convient</h2>
+            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <a href="#" class="btn_violet">Explorer nos restaurants</a>
+        </div>
+        <div class="Fonc">
+            <h2>Fonctionnement</h2>
+            <ul>
+                <li class="Fonc__btn">
+                    <span>1</span>
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #7e7e7e;"></i>
+                    <p>Choisissez un restaurant</p>
+                </li>
+                <li class="Fonc__btn">
+                    <span>2</span>
+                    <i class="fa-solid fa-list-ul" style="color: #7e7e7e;"></i>
+                    <p>Composez votre menu
+                    </li>
+                <li class="Fonc__btn">
+                    <span>3</span>
+                    <i class="fa-solid fa-store" style="color: #9356dc;"></i>
+                    <p>Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </div>
+        <section class="Restaurants">
+            <h2>Restaurants</h2>
+            <article></article>
+        </section>
     </main>
-
-
-
+    <footer>
+        <h2>ohmyfood</h2>
+        <ul>
+            <li><i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
+                <p>Proposer un restaurant</p>
+            </li>   
+            <li><i class="fa-solid fa-handshake-angle fa-2xs" style="color: #ffffff;"></i>
+                <p>Devenir partenaire</p>
+            </li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
 </body>
-
-
-
-
 </html>
