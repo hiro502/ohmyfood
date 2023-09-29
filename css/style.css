@@ -6,8 +6,34 @@
 
 body {
   width: 100%;
-  max-width: 1440px;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heart__default {
+  color: white;
+  text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
+}
+
+.heart__liked {
+  background: linear-gradient(to bottom, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 
 /* header */
@@ -51,7 +77,7 @@ input {
   border: none;
   background-color: #EAEAEA;
   outline: none;
-  width: 109px;
+  width: 120px;
   caret-color: #EAEAEA;
 }
 input::-moz-placeholder {
@@ -65,6 +91,7 @@ input::placeholder {
   color: #353535;
 }
 
+/**main**/
 .introduction {
   height: 300px;
   background-color: #F6F6F6;
@@ -151,11 +178,82 @@ input::placeholder {
   left: 33px;
 }
 
+/**Restaurants**/
 .Restaurants {
   padding: 20px;
   background-color: #F6F6F6;
 }
+.Restaurants h2 {
+  margin-bottom: 25px;
+}
+.Restaurants .Restaurants__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.Restaurants .card {
+  width: 340px;
+  height: 251px;
+  overflow: hidden;
+}
+.Restaurants .card img {
+  width: 100%;
+  height: 231px;
+  position: absolute;
+  bottom: 77px;
+}
+.Restaurants .card .card__content {
+  display: flex;
+  position: relative;
+  top: 180px;
+  margin-top: 16px;
+  margin-left: 13px;
+}
+.Restaurants .card .card__content .btn__container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 20px;
+}
+.Restaurants .card .card__content .btn__container .btn__heart {
+  position: relative;
+}
+.Restaurants .card .card__content .btn__container .btn__heart i {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition: 0.4s ease;
+}
+.Restaurants .card .card__content .btn__container .btn__heart:hover i:nth-of-type(2) {
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
 
+.card {
+  position: relative;
+}
+.card .Nouveau {
+  width: 80px;
+  height: 29px;
+  color: #008766;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*footer*/
 footer {
   padding: 22px 25px;
   background-color: #353535;
