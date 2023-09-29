@@ -111,8 +111,7 @@ input{
     text-align: center;
     font-size: 18px;
     font-weight: 300;
-   
-  }
+   }
 }
 
 
@@ -138,12 +137,16 @@ input{
 
 }
 
-.Fonc{
+.Fonc__container{
+  display: flex;
+  justify-content: center;
   height: 440px;
+}
 
+.Fonc{
+  
   h2{
     margin-top: 48px;
-    margin-left: 20px;
   }
 
   ul{
@@ -151,8 +154,10 @@ input{
     flex-direction: column;
     align-items: center;
     margin-top: 26px;
+    margin-left: 12px;
     gap: 25px;
     list-style: none;
+   
   }
   .Fonc__btn{
     width: 322px;
@@ -192,9 +197,15 @@ input{
 
 /**Restaurants**/ 
 
-.Restaurants{
-  padding: 20px;
+.Restaurants__container{
+  display: flex;
+  justify-content: center;
+  padding-top: 54px;
+  padding-bottom: 66px;
   background-color: $background-color;
+}
+
+.Restaurants{
 
   h2{
     margin-bottom: 25px;
@@ -203,6 +214,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
     gap: 18px;
   }
   
@@ -219,7 +231,6 @@ input{
     }
 
     .card__content{
-      display: flex;
       position: relative;
       top: 180px;
       margin-top: 16px;
@@ -306,3 +317,101 @@ footer{
      }
     }
   }
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Desktop */
+
+@media (min-width:1024px) {
+
+.introduction{
+  padding: 30px 0px;
+  height: 180px;
+  h2{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px;
+    height: 47px;
+    line-height: 47px;
+  }
+
+  p{
+    width: 100%;
+    line-height: 46px;
+  }
+}
+
+.Fonc__container{
+  height: 230px;  
+}
+
+.Fonc{
+  max-width: 1080px;
+  width: 100%;
+  
+
+  ul{
+    
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+  .Fonc__btn{
+    width: calc(100%/3);
+
+  }
+
+}
+
+
+.Restaurants{
+  max-width: 1080px;
+  width: 100%;
+  .Restaurants__card{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .card{
+    width:calc(50% - 50px);
+    
+    }
+}
+
+
+footer{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 54px;
+  padding: 30px 25px;
+  gap: 16px;
+  
+  h2{
+    margin: 30px 0px 0px 0px;
+    width: 137px;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    
+    li{
+      margin-top: 30px;
+      &:nth-child(n+3){
+        width: 130px;
+      }
+
+      p{
+        width: 168px;
+      }
+    }
+  }
+
+}
+
+}

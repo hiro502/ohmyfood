@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -133,18 +134,21 @@ input::placeholder {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-.Fonc {
+.Fonc__container {
+  display: flex;
+  justify-content: center;
   height: 440px;
 }
+
 .Fonc h2 {
   margin-top: 48px;
-  margin-left: 20px;
 }
 .Fonc ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 26px;
+  margin-left: 12px;
   gap: 25px;
   list-style: none;
 }
@@ -179,10 +183,14 @@ input::placeholder {
 }
 
 /**Restaurants**/
-.Restaurants {
-  padding: 20px;
+.Restaurants__container {
+  display: flex;
+  justify-content: center;
+  padding-top: 54px;
+  padding-bottom: 66px;
   background-color: #F6F6F6;
 }
+
 .Restaurants h2 {
   margin-bottom: 25px;
 }
@@ -204,7 +212,6 @@ input::placeholder {
   bottom: 77px;
 }
 .Restaurants .card .card__content {
-  display: flex;
   position: relative;
   top: 180px;
   margin-top: 16px;
@@ -275,4 +282,78 @@ footer ul li {
   display: flex;
   gap: 11px;
   align-items: center;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Desktop */
+@media (min-width: 1024px) {
+  .introduction {
+    padding: 30px 0px;
+    height: 180px;
+  }
+  .introduction h2 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px;
+    height: 47px;
+    line-height: 47px;
+  }
+  .introduction p {
+    width: 100%;
+    line-height: 46px;
+  }
+  .Fonc__container {
+    height: 230px;
+  }
+  .Fonc {
+    max-width: 1080px;
+    width: 100%;
+  }
+  .Fonc ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+  .Fonc .Fonc__btn {
+    width: 33.3333333333%;
+  }
+  .Restaurants {
+    max-width: 1080px;
+    width: 100%;
+  }
+  .Restaurants .Restaurants__card {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .Restaurants .card {
+    width: calc(50% - 50px);
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 54px;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  footer h2 {
+    margin: 30px 0px 0px 0px;
+    width: 137px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li {
+    margin-top: 30px;
+  }
+  footer ul li:nth-child(n+3) {
+    width: 130px;
+  }
+  footer ul li p {
+    width: 168px;
+  }
 }/*# sourceMappingURL=style.css.map */
