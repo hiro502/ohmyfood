@@ -1,27 +1,86 @@
 @import "./variables";
-@import"./functions";
+@import"./common";
 
-@mixin flexCenter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+/**loading animation**/ 
+
+.loading{
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey2;
+  position: fixed;
+  z-index: 9999;
+  animation: loading 4s forwards;
+  @include flexCenter;
+    
+    span{
+       font-family: Shrikhand;
+       margin-left: 2px;
+       color: $grey;
+    }
 }
 
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  }
-
-body{
-  width: 100%;
-  box-sizing: border-box;
+.loading span:nth-child(1){
+  animation: loading__text 4s 0.2s forwards;
+}
+.loading span:nth-child(2){
+  animation: loading__text 4s 0.4s forwards;
+}
+.loading span:nth-child(3){
+  animation: loading__text 4s 0.6s forwards;
+}
+.loading span:nth-child(4){
+  animation: loading__text 4s 0.8s forwards;
+}
+.loading span:nth-child(5){
+  animation: loading__text 4s 1.2s forwards;
+}
+.loading span:nth-child(6){
+  animation: loading__text 4s 1.4s forwards;
+}
+.loading span:nth-child(7){
+  animation: loading__text 4s 1.6s forwards;
+}
+.loading span:nth-child(8){
+  animation: loading__text 4s 1.8s forwards;
+}
+.loading span:nth-child(9){
+  animation: loading__text 4s 2.0s forwards;
+}
+.loading span:nth-child(10){
+  animation: loading__text 4s 2.2s forwards;
+}
+.loading i{
+  animation: loading__text 4s 2.4s forwards;
+  color: $grey;
+}
+@keyframes loading{
+0%{opacity: 1;}
+75%{opacity: 1;}
+100%{opacity: 0;
+  visibility: hidden;}
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+@keyframes loading__text{
+  0%{opacity: 1;}
+  12%{transform: translateY(-50%);}
+  25%{transform: translateY(0);}
+  38%{transform: translateY(-50%);}
+  50%{transform: translateY(0);}
+  62%{transform: translateY(-50%);}
+  75%{opacity: 1; 
+    transform: translateY(0);}
+  87%{transform: translateY(-50%);}  
+  100%{opacity: 0;
+    transform: translateY(-50%);  
+    visibility: hidden;}
 }
+
+
+
+/****** General ***********/
+
 
 .card{
   background-color: white;
@@ -33,16 +92,8 @@ a{
     }
 }
 
-.heart__default{
-  color: white;
-  text-shadow:-0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black ;
-}
 
-.heart__liked{
-  background: linear-gradient(to bottom, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-}
+
 
 /* header */
 
@@ -236,38 +287,31 @@ input{
       margin-top: 16px;
       margin-left: 13px;
       
-      .btn__container{
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        width: 20px;
-        .btn__heart{
-          position: relative;
-        i{
-          position: absolute;
-          top: 60%;
-          left: 60%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          width: 100%;
-          -webkit-transition: .4s ease;
-          transition: .4s ease;
-          }
-        &:hover i:nth-of-type(2) {
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          opacity: 0;
-          }
       
-        }
+    }
       
-      }
-    
+  }
+}
+
+.btn__container{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.card__content{
+  
+    h3{
+    font-size: 18px;
+    font-weight: 700;
     }
 
+    p{
+    font-size: 17px;
+    font-weight: 300;
+    }
   }
 
-}
 
 .card{
   position: relative;
@@ -290,33 +334,7 @@ input{
 }
 
 
-/*footer*/ 
 
-
-footer{
-  padding: 22px 25px;
-  background-color: $grey;
-  color: white;
-  h2{
-    font-family: Shrikhand;
-    margin-bottom: 16px;
-    font-weight: 400;
-    font-size: 18px;
-    
-  }
-
-  ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    li{ 
-      display: flex;
-      gap: 11px;
-      align-items: center;
-     }
-    }
-  }
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -381,37 +399,6 @@ footer{
     width:calc(50% - 50px);
     
     }
-}
-
-
-footer{
-  display: flex;
-  flex-direction: row-reverse;
-  height: 54px;
-  padding: 30px 25px;
-  gap: 16px;
-  
-  h2{
-    margin: 30px 0px 0px 0px;
-    width: 137px;
-  }
-
-  ul{
-    display: flex;
-    flex-direction: row;
-    
-    li{
-      margin-top: 30px;
-      &:nth-child(n+3){
-        width: 130px;
-      }
-
-      p{
-        width: 168px;
-      }
-    }
-  }
-
 }
 
 }

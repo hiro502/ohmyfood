@@ -1,0 +1,128 @@
+/**General**/
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+a{
+    text-decoration: none;
+    color: inherit;
+  } 
+  
+.fa-heart{
+    font-size: 20px;
+}
+
+
+/**like button**/ 
+.heart__liked{
+    background: linear-gradient(to bottom, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+.btn__container{
+    width: 20px;
+    .btn__heart{
+      position: relative;
+    
+      i{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .6s ease-in-out;
+      }
+  
+      i:nth-child(1){
+        opacity: 0;
+      }   
+  
+      i:nth-child(2){
+      opacity: 1;
+      }
+  
+    &:hover i:nth-child(1){
+        opacity: 1;
+     }  
+    &:hover i:nth-of-type(2) {
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: .6s ease-in-out;
+      }
+  
+    }
+  }
+
+/**footer**/
+
+footer{
+    padding: 22px 25px;
+    background-color: $grey;
+    color: white;
+    h2{
+      font-family: Shrikhand;
+      margin-bottom: 16px;
+      font-weight: 400;
+      font-size: 18px;
+      
+    }
+  
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      li{ 
+        display: flex;
+        gap: 11px;
+        align-items: center;
+       }
+      }
+    }
+
+@media (min-width:1024px){
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 54px;
+        padding: 30px 25px;
+        gap: 16px;
+        
+        h2{
+          margin: 30px 0px 0px 0px;
+          width: 137px;
+        }
+      
+        ul{
+          display: flex;
+          flex-direction: row;
+          
+          li{
+            margin-top: 30px;
+            &:nth-child(n+3){
+              width: 130px;
+            }
+      
+            p{
+              width: 168px;
+            }
+          }
+        }
+      
+    }
+}
