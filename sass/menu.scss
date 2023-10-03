@@ -33,13 +33,14 @@
 /**main**/
 
 .img__menu {
-    width: 100%;
     height: 275px;
-    background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) lightgray 50% 58%/ cover no-repeat;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 60%;
 }
 
 .menu__container{
-    margin-top: -40px;
+    margin-top: -50px;
     background-color: $background-color;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
@@ -222,6 +223,9 @@
 }
 .f9{
     animation: fadein 1.5s 1.8s forwards;
+}
+.f10{
+    animation: fadein 1.5s 2s forwards;
 }
 
 @keyframes fadein {
