@@ -221,6 +221,7 @@ footer ul li {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 .btn__menu:hover .btn__check {
   width: 59px;
