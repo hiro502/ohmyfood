@@ -39,7 +39,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .btn__container .btn__heart i:nth-child(1) {
   opacity: 0;
@@ -51,9 +51,7 @@ a {
   opacity: 1;
 }
 .btn__container .btn__heart:hover i:nth-of-type(2) {
-  transform: translate(-50%, -50%);
   opacity: 0;
-  transition: 0.6s ease-in-out;
 }
 
 /**button violet**/
@@ -223,8 +221,6 @@ footer ul li {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  opacity: 0;
 }
 .btn__menu:hover .btn__check {
   width: 59px;
@@ -246,17 +242,17 @@ footer ul li {
   transition: width 250ms ease-out;
 }
 
-.btn__right {
+.btn__left {
   overflow: hidden;
 }
-.btn__right h3 {
+.btn__left h3 {
   font-size: 18px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.btn__right p {
+.btn__left p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
