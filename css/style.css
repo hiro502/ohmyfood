@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**General**/
 * {
   font-family: "Roboto", sans-serif;
@@ -75,24 +74,6 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer h2 {
-  font-family: Shrikhand;
-  margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 18px;
-}
-footer ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-footer ul li {
-  display: flex;
-  gap: 11px;
-  align-items: center;
-}
-
 @media (min-width: 1024px) {
   footer {
     display: flex;
@@ -101,24 +82,50 @@ footer ul li {
     padding: 30px 25px;
     gap: 16px;
   }
+}
+footer h2 {
+  font-family: Shrikhand;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 18px;
+}
+@media (min-width: 1024px) {
   footer h2 {
     margin: 30px 0px 0px 0px;
     width: 137px;
   }
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media (min-width: 1024px) {
   footer ul {
     display: flex;
     flex-direction: row;
   }
+}
+footer ul li {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
   footer ul li {
     margin-top: 30px;
   }
   footer ul li:nth-child(n+3) {
     width: 130px;
   }
-  footer ul li p {
+}
+@media (min-width: 1024px) {
+  footer ul p {
     width: 168px;
   }
 }
+
 /**loading animation**/
 .loading {
   width: 100vw;
@@ -248,10 +255,15 @@ footer ul li {
   width: 100%;
   height: 63px;
   position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1024px) {
+  .header__container .hdr__img {
+    height: 93px;
+  }
 }
 .header__container .hdr__img img {
   width: 162px;
@@ -259,6 +271,12 @@ footer ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .header__container .hdr__img img {
+    width: 200px;
+    height: 34px;
+  }
 }
 .header__container .hdr__location {
   width: 100%;
@@ -300,11 +318,27 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .introduction {
+    padding: 30px 0px;
+    height: 180px;
+  }
+}
 .introduction h2 {
   width: 275px;
   height: 68px;
   text-align: center;
   margin: 40px 0px 0px;
+}
+@media (min-width: 1024px) {
+  .introduction h2 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px;
+    height: 47px;
+    line-height: 47px;
+  }
 }
 .introduction p {
   width: 315px;
@@ -312,6 +346,12 @@ input::placeholder {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
+}
+@media (min-width: 1024px) {
+  .introduction p {
+    width: 100%;
+    line-height: 46px;
+  }
 }
 
 .btn__violet {
@@ -329,7 +369,18 @@ input::placeholder {
   justify-content: center;
   height: 440px;
 }
+@media (min-width: 1024px) {
+  .Fonc__container {
+    height: 230px;
+  }
+}
 
+@media (min-width: 1024px) {
+  .Fonc {
+    max-width: 1080px;
+    width: 100%;
+  }
+}
 .Fonc h2 {
   margin-top: 48px;
 }
@@ -342,6 +393,13 @@ input::placeholder {
   gap: 25px;
   list-style: none;
 }
+@media (min-width: 1024px) {
+  .Fonc ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+}
 .Fonc .Fonc__btn {
   width: 322px;
   height: 72px;
@@ -351,6 +409,11 @@ input::placeholder {
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   position: relative;
+}
+@media (min-width: 1024px) {
+  .Fonc .Fonc__btn {
+    width: 33.3333333333%;
+  }
 }
 .Fonc .Fonc__btn span {
   width: 24px;
@@ -381,6 +444,12 @@ input::placeholder {
   background-color: #F6F6F6;
 }
 
+@media (min-width: 1024px) {
+  .Restaurants {
+    max-width: 1080px;
+    width: 100%;
+  }
+}
 .Restaurants h2 {
   margin-bottom: 25px;
 }
@@ -390,10 +459,23 @@ input::placeholder {
   align-items: center;
   gap: 18px;
 }
+@media (min-width: 1024px) {
+  .Restaurants .Restaurants__card {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
 .Restaurants .card {
   width: 340px;
   height: 251px;
   overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .Restaurants .card {
+    width: calc(50% - 50px);
+  }
 }
 .Restaurants .card img {
   width: 100%;
@@ -442,61 +524,4 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-/****** Media queries ***********/
-/* Desktop */
-@media (min-width: 1024px) {
-  .header__container .hdr__img {
-    height: 93px;
-  }
-  .header__container .hdr__img img {
-    width: 200px;
-    height: 34px;
-  }
-  .introduction {
-    padding: 30px 0px;
-    height: 180px;
-  }
-  .introduction h2 {
-    width: 100%;
-    font-size: 40px;
-    font-weight: 700;
-    margin: 0px;
-    height: 47px;
-    line-height: 47px;
-  }
-  .introduction p {
-    width: 100%;
-    line-height: 46px;
-  }
-  .Fonc__container {
-    height: 230px;
-  }
-  .Fonc {
-    max-width: 1080px;
-    width: 100%;
-  }
-  .Fonc ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 36px;
-  }
-  .Fonc .Fonc__btn {
-    width: 33.3333333333%;
-  }
-  .Restaurants {
-    max-width: 1080px;
-    width: 100%;
-  }
-  .Restaurants .Restaurants__card {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 50px;
-  }
-  .Restaurants .card {
-    width: calc(50% - 50px);
-  }
 }/*# sourceMappingURL=style.css.map */

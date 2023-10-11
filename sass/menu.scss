@@ -12,6 +12,9 @@
     height: 63px; 
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     position: relative;
+    @include pc {
+        height: 96px;
+    }
         a{
             position: absolute;
             top: 50%;
@@ -31,6 +34,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @include pc {
+                width: 200px;
+                height: 34px;
+            }
         }
     } 
     
@@ -41,6 +48,9 @@
     width: 100%;
     object-fit: cover;
     object-position: 50% 60%;
+    @include pc {
+        height: 390px;
+    }
     }
 
 .menu__container{
@@ -64,7 +74,9 @@
     width: 341px;
     height: 27px;
     margin-top: 20px;
-
+    @include pc {
+        margin-top: 39px;
+    }
     h2{
         font-family: Shrikhand;
         font-size: 28px;
@@ -85,6 +97,7 @@
    flex-direction: column;
    align-items: center;
    gap: 12px;
+   
 }
 
 .menu__category{
@@ -92,6 +105,9 @@
         font-weight: 300;
         text-transform: uppercase;
         width: 349px;
+        @include pc {
+            width: 634px;
+        }
     &::after{
     content: "";
     display: block;
@@ -111,12 +127,17 @@
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
     opacity: 0;
-
+    @include pc {
+        width: 634px;
+    }
     &:hover .btn__check{
         width: 59px;
     }
     &:hover .btn__content{
        width: calc(100% - 89px);
+       @include pc {
+        width: 550px;
+       }
     }
     &:hover .btn__check i{
         opacity: 1;
@@ -132,6 +153,9 @@
     padding: 15px;
     width: 319px; 
     transition: width 250ms ease-out;
+    @include pc {
+        width: 600px;
+    }
 }
 
 
@@ -239,49 +263,3 @@
 
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Desktop */
-
-@media (min-width:1024px){
-
-.header__container__menu{
-    height: 96px;
-
-    img{
-        width: 200px;
-        height: 34px;
-    }
-
-}    
-
-.img__menu{
-    height: 390px;
-}
-
-.restaurant__name{
-    margin-top: 39px;
-}
-
-.menu__category{
-    width: 634px;
-}
-
-.btn__menu{
-    width: 634px;
-
-    &:hover .btn__check{
-        width: 59px;
-    }
-    &:hover .btn__content{
-       width: 550px;
-    }
-
-}
-
-.btn__content{
-    width: 600px;
-}
-
-}

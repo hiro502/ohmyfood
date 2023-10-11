@@ -5,6 +5,12 @@
     align-items: center;
   }
 
+@mixin pc {
+  @media (min-width: 1024px) {
+    @content;
+  }
+} 
+
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -91,12 +97,22 @@ footer{
     padding: 22px 25px;
     background-color: $grey;
     color: white;
+    @include pc {
+      display: flex;
+      flex-direction: row-reverse;
+      height: 54px;
+      padding: 30px 25px;
+      gap: 16px
+    }
     h2{
       font-family: Shrikhand;
       margin-bottom: 16px;
       font-weight: 400;
       font-size: 18px;
-      
+      @include pc {
+        margin: 30px 0px 0px 0px;
+        width: 137px;
+      }
     }
   
     ul{
@@ -104,42 +120,26 @@ footer{
       display: flex;
       flex-direction: column;
       gap: 7px;
+      @include pc {
+        display: flex;
+        flex-direction: row
+      }
       li{ 
         display: flex;
         gap: 11px;
         align-items: center;
+        @include pc {
+          margin-top: 30px;
+            &:nth-child(n+3){
+              width: 130px;
+            }
+        }
+       }
+       p{
+        @include pc {
+          width: 168px;
+        }
        }
       }
     }
 
-@media (min-width:1024px){
-    footer{
-        display: flex;
-        flex-direction: row-reverse;
-        height: 54px;
-        padding: 30px 25px;
-        gap: 16px;
-        
-        h2{
-          margin: 30px 0px 0px 0px;
-          width: 137px;
-        }
-      
-        ul{
-          display: flex;
-          flex-direction: row;
-          
-          li{
-            margin-top: 30px;
-            &:nth-child(n+3){
-              width: 130px;
-            }
-      
-            p{
-              width: 168px;
-            }
-          }
-        }
-      
-    }
-}
